@@ -238,7 +238,33 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             SelectObject(hdc, hBrush);
             Ellipse(hdc, 150, 450, 200, 500);
             Ellipse(hdc, 350, 450, 400, 500);
-
+            // gorshok
+            hPen = CreatePen(PS_SOLID, 3, RGB(165, 70, 0));
+            SelectObject(hdc, hPen);
+            hBrush = CreateSolidBrush(RGB(180, 90, 0));
+            SelectObject(hdc, hBrush);
+            Rectangle(hdc, 650, 275, 750, 300);
+            POINT pe[4] = { {665, 300},{675,350},{725, 350},{735,300} };
+            Polygon(hdc, pe, 4);
+            // stvol
+            hPen = CreatePen(PS_SOLID, 3, RGB(135, 70, 20));
+            SelectObject(hdc, hPen);
+            hBrush = CreateSolidBrush(RGB(150, 80, 10));
+            SelectObject(hdc, hBrush);
+            Rectangle(hdc, 675, 225, 725, 275);
+            POINT pen[4] = { {725,250},{750, 225},{750, 250},{725,275} };
+            Polygon(hdc, pen, 4);
+            // krona
+            hPen = CreatePen(PS_SOLID, 3, RGB(85, 215, 10));
+            SelectObject(hdc, hPen);
+            hBrush = CreateHatchBrush(HS_DIAGCROSS, RGB(95, 240, 12));
+            SelectObject(hdc, hBrush);
+            RoundRect(hdc, 625, 50, 775, 225, 25, 25);
+            hPen = CreatePen(PS_SOLID, 2, RGB(75, 200, 10));
+            SelectObject(hdc, hPen);
+            hBrush = CreateHatchBrush(HS_BDIAGONAL, RGB(85, 220, 12));
+            SelectObject(hdc, hBrush);
+            RoundRect(hdc, 750, 215, 800, 265, 10, 10);
 
             //Ellipse(hdc, 50, 100, 250, 200);
             //Arc(hdc, 50, 100, 250, 200, 300, 150, 50, 250);
